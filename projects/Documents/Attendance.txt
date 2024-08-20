@@ -1,0 +1,67 @@
+
+
+create proc Insert_Student_Attendance
+(
+USE [SPMS]
+GO
+/****** Object:  StoredProcedure [dbo].[Insert_Student_Attendance]    Script Date: 05/29/2012 11:20:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER proc [dbo].[Insert_Student_Attendance]
+(
+@USN varchar(20),
+@AttendancePercentage varchar(max) ,
+@Is_Active int,
+@Updated_Date date,
+@Updated_By varchar(20)
+)
+as begin
+
+tran
+declare @AlreadyExisted bit
+	Set @AlreadyExisted=0
+ begin try
+		if Exists(select * from Student_Attendance_Record where USN=@USN)
+			begin
+				set @AlreadyExisted=1
+				update Student_Attendance_Record set AttendancePercentage=@AttendancePercentage,@Is_Active=1,Updated_Date=@Updated_Date,Updated_By=@Updated_By   
+				where USN=@USN
+			end
+		else
+			begin
+			insert into Student_Attendance_Record (USN,AttendancePercentage,Is_Active,Updated_Date,Updated_By)values(@USN,@AttendancePercentage,@Is_Active,@Updated_Date,@Updated_By)
+			commit tran
+					end		
+end try
+	
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+
+
+create proc Insert_Gap_In_Study
+(@GapInStudyId int,
+@USN varchar(20),
+@Year int,
+@Class varchar(50),
+@Description varchar(max),
+@Is_Active int,
+@Updated_Date datetime,
+@Updated_By varchar(20)
+)
+as begin
+tran begin try
+insert into Gap_In_Study (USN,Year,Class Is_Active,Updated_Date,Updated_By)values(@USN,@Year,@Class ,@Description ,@Is_Active,@Updated_Date,@Updated_By)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+

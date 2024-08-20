@@ -1,0 +1,129 @@
+
+// UG
+
+create proc Insert_UG
+(@USN varchar(20),
+@Branch varchar(20),
+@Year int,
+@Percentage nchar(10),
+@College varchar(max),
+@University varchar(max),
+)
+as begin
+tran begin try
+insert into UG (USN,Branch,Year,Percentage,College,University)values(@USN,@Branch,@Year,@Percentage,@College,@University)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+//PG
+
+create proc Insert_Student_Acadamics_Details
+(@USN varchar(20),
+@Class varchar(20),
+@Year int,
+@Percentage varchar(50),
+@Is_Active int,
+@Updated_Date datetime,
+Updated_By varchar(20),
+
+@College varchar(max),
+@University varchar(max),
+)
+as begin
+tran begin try
+insert into Student_Acadamics_Details (USN,Branch,Year,Percentage,College,University)values(@USN,@Branch,@Year,@Percentage,@College,@University)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+
+//PUC
+
+
+create proc Insert_PUC
+(@USN varchar(20),
+@Branch varchar(20),
+@Year int,
+@Percentage nchar(10),
+@College varchar(max),
+@University varchar(max),
+)
+as begin
+tran begin try
+insert into PUC (USN,Branch,Year,Percentage,College,University)values(@USN,@Branch,@Year,@Percentage,@College,@University)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+
+//Diploma
+
+create proc Insert_Diploma
+(@USN varchar(20),
+@Branch varchar(20),
+@Year int,
+@Percentage nchar(10),
+@College varchar(max),
+@University varchar(max),
+)
+as begin
+tran begin try
+insert into Diploma (USN,Branch,Year,Percentage,College,University)values(@USN,@Branch,@Year,@Percentage,@College,@University)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+// SSLC not edit
+
+create proc Insert_UG
+(@USN varchar(20),
+@Year int,
+@Percentage nchar(10),
+@School varchar(max),
+@Board varchar(max),
+)
+as begin
+tran begin try
+insert into UG (USN,Year,Percentage,School,Board)values(@USN,@Year,@Percentage,@School,@Board)
+commit tran
+end try
+begin catch
+rollback tran
+raiserror('can not be inserted',16,1);
+
+end catch
+
+
+//
+
+
+
+
+
+
+
+
+
+
+select sc.Email from Student_Config sc,Company_Placement_Criteria cp,SSLC s,PUC pu,UG u,Student_Acadamics_Details scd,Diploma d,Department_Master dm,Recruitment_Plan_Schedular r where (s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and pu.PUC_Percentage>=cp.CutOffTwelth and pu.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN or(s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and d.Diploma_Percentage=cp.diploma and d.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN)or(s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and pu.PUC_Percentage>=cp.CutOffTwelth and pu.USN=sc.USN and d.Diploma_Percentage>=cp.diploma and d.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN)and sc.DepartmentId=1 and r.CompanyId=7)
+
+
+
+select sc.Email from Student_Config sc,Gap_In_Study gp,Company_Placement_Criteria cp,SSLC s,PUC pu,UG u,Student_Acadamics_Details scd,Diploma d,Department_Master dm,Recruitment_Plan_Schedular r where (gp.Year<=cp.BackLogAllowedFlag and gp.USN=s.USN and s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and pu.PUC_Percentage>=cp.CutOffTwelth and pu.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN or(s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and pu.PUC_Percentage>=cp.CutOffTwelth and pu.USN=sc.USN and d.Diploma_Percentage=cp.diploma and d.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN) or(gp.Year<=cp.BackLogAllowedFlag and gp.USN=s.USN and s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and d.Diploma_Percentage=cp.diploma and d.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN)or(gp.Year<=cp.BackLogAllowedFlag and gp.USN=s.USN and s.Percentage>=cp.CutOffTenth and s.USN=sc.USN and pu.PUC_Percentage>=cp.CutOffTwelth and pu.USN=sc.USN and d.Diploma_Percentage>=cp.diploma and d.USN=sc.USN and u.UG_Percentage>=cp.CutOffDegree and u.USN=sc.USN and scd.PG_Percentage>=cp.post_graduation and scd.USN=sc.USN)and sc.DepartmentId=1 and r.CompanyId=7)

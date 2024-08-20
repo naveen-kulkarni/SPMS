@@ -1,0 +1,10 @@
+E:\Project\Project\bin\Project.dll
+E:\Project\Project\bin\Project.pdb
+E:\Project\Project\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Project\obj\Debug\Project.dll
+E:\Project\Project\obj\Debug\Project.pdb
+G:\Project\Project\bin\Project.dll
+G:\Project\Project\bin\Project.pdb
+G:\Project\Project\obj\Debug\ResolveAssemblyReference.cache
+G:\Project\Project\obj\Debug\Project.dll
+G:\Project\Project\obj\Debug\Project.pdb
