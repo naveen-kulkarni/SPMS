@@ -10,7 +10,16 @@
 namespace Final_Crystal_Reports {
     
     
-    public partial class Test_Schedule {
+    public partial class Company_List {
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// DDLCmpSelCriteria control.
@@ -22,49 +31,31 @@ namespace Final_Crystal_Reports {
         protected global::System.Web.UI.WebControls.DropDownList DDLCmpSelCriteria;
         
         /// <summary>
-        /// DDLCmpName control.
+        /// DDLDeptWise control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLCmpName;
+        protected global::System.Web.UI.WebControls.DropDownList DDLDeptWise;
         
         /// <summary>
-        /// DDLDeptName control.
+        /// DDLCmpWise control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLDeptName;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCmpWise;
         
         /// <summary>
-        /// Show control.
+        /// DDLYearWise control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Show;
-        
-        /// <summary>
-        /// BtnShowDept control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnShowDept;
-        
-        /// <summary>
-        /// CrystalReportViewer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::CrystalDecisions.Web.CrystalReportViewer CrystalReportViewer1;
+        protected global::System.Web.UI.WebControls.DropDownList DDLYearWise;
         
         /// <summary>
         /// BtnHome control.
@@ -74,5 +65,23 @@ namespace Final_Crystal_Reports {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnHome;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// CrystalReportViewer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CrystalDecisions.Web.CrystalReportViewer CrystalReportViewer1;
     }
 }
