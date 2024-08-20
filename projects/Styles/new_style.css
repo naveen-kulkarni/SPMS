@@ -1,0 +1,218 @@
+﻿div.hideSkiplinks
+{
+    background-color:white;
+    width:100%;
+}
+
+div.submenutype
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.submenutype ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+
+body
+{
+    font-family:Verdana Arial ;
+    font-size:12px;
+   
+}
+div.submenutype ul li a, div.submenutype ul li a:visited
+{
+   /*background-color:white;*/
+   background-image:url(../images/background/menubar.png);
+   
+   height: 28px;   
+    /*border: 0px #4e667d none;*/
+    color:black;
+    font-size:16px;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.submenutype ul li a:hover
+{
+  /* background-color: white;*/
+    background-image:url(../images/background/menubutton12.png);
+    color: white;
+    text-decoration: none;
+}
+
+
+div.submenutype ul li a:active
+{
+    background-image:url(../images/background/menubutton12.png);
+    /*background-color: white;*/
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/*-----------------body---------------------------*/
+.mainbody
+{
+    /*border:1px solid black;*/
+}
+
+
+
+
+/*-------------------form------------------*/
+.appform
+{
+    border:1px solid black;
+}
+
+
+
+/*-------------TextBoxes-----------------*/
+.searchTxtBox
+{
+    
+   font-family:Verdana;
+    font-size:16px;
+   
+}
+    
+    
+    
+    .marquebackground
+    {
+        background-image:url(../images/background/logo.gif);
+    }
+.calenderalign
+{
+    width:100px;
+    height:100px;
+    text-decoration:300px;
+}
+
+.tablewidth
+{
+    width:350px;
+    font-family:Verdana;
+    font-size:14px;
+}
+.searchTable
+{
+    width:900px;
+   
+}
+.commonTxtbox
+{
+    font-family:Verdana;
+    font-size:14px;
+}
+
+
+.dropdownbox
+{
+    height:auto;
+    width:auto;
+    font-family:Verdana;
+    font-size:16px;
+}
+
+.lablewidth
+{
+    /*background-color:White;*/
+    border:none;
+   
+    font-family:Verdana;
+    font-size:14px;
+    font-style:normal;
+    color:Black;
+}
+
+
+.Textwidth
+{
+    border:solid thin;
+    height:20px;
+    width:70px;
+    color:Black;
+    font-family:Verdana;
+    font-size:14px;
+}
+
+.ReportMsg
+{
+    text-align:center;
+    color:Red;
+    font-family:Arial;
+    font-size:10pt;
+    font-style:normal;
+}
+
+.colmwidth
+{
+     height:25px;
+     font-family:Verdana;
+     font-size:18px;
+}
+
+.testSchedule
+{
+    border-style:none;
+    border-color: inherit;
+    border-width: 1px;
+    position:relative;
+    
+    top: 0px;
+    left: 0px;
+    width: 697px;
+    height: 481px;
+}
+
+.pagecontent
+{
+    
+    border-style:none;
+    border-color: inherit;
+    border-width: 1px;
+    position:relative;    
+    top: 0px;
+    left: 0px;
+    width: 1315px;
+    height:623px
+}
+
+
+
+.tdcompress
+{
+    width:10px;
+}
+
+
+
+.list_company_Scheduled
+{
+    position:relative;
+     background-color:#C4DCF7;
+    top: -71px;
+    left: 260px;
+    width:76px;
+    height:auto;
+}
+
+.list_company_Schd_hgt_wdt
+{
+     background-color:#C4DCF7;
+    height:auto;
+    width:auto;
+}

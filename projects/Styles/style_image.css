@@ -1,0 +1,153 @@
+﻿.tble_menu
+{
+    border-style:none;    
+    
+}
+
+.fldtbg
+{
+    background-color:Aqua;
+    
+}
+.innfldbg
+{
+    background-color:Window;
+   
+    
+}
+
+
+.Img_Home  
+{
+    border-style:none;    
+    width:18px;
+    height:18px;
+    background-image:url(../images/buttons/But_Home.gif);
+    
+}
+
+  .Img_Home:hover
+{
+    border-style:none;
+  background-image:url(../images/buttons/But_Home.png); 
+  width:50px;
+    height:50px;
+    
+}
+
+
+  .Img_Home:active
+{
+    border-style:none;
+    background-image:url(../images/buttons/But_Home.png);
+    width:50px;
+    height:50px; 
+    
+}
+
+
+
+.Img_SendMail  
+{
+    border-style:none;    
+    width:18px;
+    height:18px;
+    background-image:url(../images/buttons/mail.gif);
+    
+}
+
+  .Img_SendMail:hover
+{
+  border-style:none;
+  background-image:url(../images/buttons/mail.ico); 
+  width:50px;
+  height:50px;
+  
+}
+
+
+  .Img_SendMail:active
+{
+    border-style:none;
+    background-image:url(../images/buttons/mail.ico); 
+    width:50px;
+    height:50px;
+  
+}
+
+
+.headbackground
+{
+  
+  width:680px;
+  height:50px;
+}
+
+
+.buttonsimg  
+{
+    border-style:none;    
+    width:130px;
+    height:40px;
+     background-image:url(../images/background/menubar.png);
+    
+}
+
+  .buttonsimg:hover
+{
+  border-style:solid;
+  border:1px;
+  font-family:Times New Roman;
+  font-size:16px;
+  font-style:oblique;
+   background-image:url(../images/background/menubutton12.png);
+    
+  width:130px;
+  height:40px;
+  
+}
+
+
+  .buttonsimg:active
+{
+    border-style:solid;
+  border:1px;
+    background-image:url(../images/background/menubutton12.png);
+    width:130px;
+    height:40px;
+  
+}
+
+  .buttonsimg:link
+{
+   border-style:solid;
+  border:1px;
+    background-image:url(../images/background/menubutton12.png);
+    width:130px;
+    height:40px;
+  
+}
+
+
+.txtbox
+{
+    background-color:#C4DCF7;
+    
+    
+    border:none;
+    width:auto;
+    height:auto;
+    font-size:14px;
+}
+.liststudent
+{
+    border:1px solid black;   
+}
+.liststudent1
+{
+    margin:8px 0px 0px 50px;
+}
+.liststudent2
+{
+    margin:8px 0px 0px 73px;
+}
